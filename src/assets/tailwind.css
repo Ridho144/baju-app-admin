@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('/fonts/Barlow-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-ExtraBold.ttf');
+}
+
+:root {
+    --font-barlow: "Barlow", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-poppins-extrabold: "Poppins", sans-serif;
+
+    /* Warna tema emas putih */
+    --color-latar: #ffffff; /* putih */
+    --color-teks: #1a1a1a; /* teks utama (gelap) */
+    --color-teks-samping: #6b7280; /* abu-abu */
+    --color-garis: #e5e7eb; /* abu muda */
+    --color-emas: #d4af37; /* emas utama */
+    --color-emas-muda: #f5e1a4; /* emas muda */
+    --color-emas-gelap: #b28d2b; /* emas tua */
+}
+
+/* Tambahkan di file CSS Anda */
+#app-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#main-content {
+  overflow: auto;
+}
+/* contoh penggunaan di CSS */
+.bg-emas {
+    background-color: var(--color-emas);
+}
+.text-emas {
+    color: var(--color-emas);
+}
+.border-emas {
+    border-color: var(--color-emas);
+}
+.hover\:bg-emas:hover {
+    background-color: var(--color-emas-gelap);
+}
+
+/* Untuk badge warna berdasarkan status */
+.badge {
+    @apply px-2 py-1 rounded-full text-xs font-semibold;
+  }
+  
+  .badge-proses {
+    background-color: #cfe2ff;
+    color: #084298;
+  }
+  
+  .badge-kirim {
+    background-color: #d1e7dd;
+    color: #0f5132;
+  }
+  
+  .badge-batal {
+    background-color: #f8d7da;
+    color: #842029;
+  }
+  
+  /* Untuk badge loyalitas pelanggan */
+  .member-platinum {
+    background-color: #e5d9b6;
+    color: #5f4b32;
+  }
+  
+  .member-gold {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .member-silver {
+    background-color: #e2e3e5;
+    color: #41464b;
+  }
+
+  .badge {
+    @apply px-2 py-1 rounded-full text-xs font-semibold;
+  }
+  
+  
+

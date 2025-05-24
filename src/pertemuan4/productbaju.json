@@ -1,0 +1,502 @@
+[
+    {
+      "id": 1,
+      "name": "Shirt Model 1",
+      "brand": "ClassicLine",
+      "price": 109000,
+      "image": "shirt.png",
+      "category": {
+        "type": "Shirt",
+        "gender": "Women"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Slim"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Hoodie Model 2",
+      "brand": "FashionHub",
+      "price": 119000,
+      "image": "hoodie_2.jpeg",
+      "category": {
+        "type": "Hoodie",
+        "gender": "Unisex"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Regular"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Jacket Model 3",
+      "brand": "Moderno",
+      "price": 129000,
+      "image": "jacket_3.jpg",
+      "category": {
+        "type": "Jacket",
+        "gender": "Men"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Oversized"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Sweater Model 4",
+      "brand": "SimpleStyle",
+      "price": 139000,
+      "image": "sweater_4.jpg",
+      "category": {
+        "type": "Sweater",
+        "gender": "Women"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Slim"
+      }
+    },
+    {
+      "id": 5,
+      "name": "T-Shirt Model 5",
+      "brand": "UrbanWear",
+      "price": 149000,
+      "image": "t-shirt_5.jpg",
+      "category": {
+        "type": "T-Shirt",
+        "gender": "Unisex"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Regular"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Shirt Model 6",
+      "brand": "ClassicLine",
+      "price": 159000,
+      "image": "shirt_6.jpg",
+      "category": {
+        "type": "Shirt",
+        "gender": "Men"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Oversized"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Hoodie Model 7",
+      "brand": "FashionHub",
+      "price": 169000,
+      "image": "hoodie_7.jpeg",
+      "category": {
+        "type": "Hoodie",
+        "gender": "Women"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Slim"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Jacket Model 8",
+      "brand": "Moderno",
+      "price": 179000,
+      "image": "jacket_8.jpg",
+      "category": {
+        "type": "Jacket",
+        "gender": "Unisex"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Regular"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Sweater Model 9",
+      "brand": "SimpleStyle",
+      "price": 189000,
+      "image": "sweater_9.jpg",
+      "category": {
+        "type": "Sweater",
+        "gender": "Men"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Oversized"
+      }
+    },
+    {
+      "id": 10,
+      "name": "T-Shirt Model 10",
+      "brand": "UrbanWear",
+      "price": 199000,
+      "image": "t-shirt_10.jpg",
+      "category": {
+        "type": "T-Shirt",
+        "gender": "Women"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Slim"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Shirt Model 11",
+      "brand": "ClassicLine",
+      "price": 209000,
+      "image": "shirt_11.jpg",
+      "category": {
+        "type": "Shirt",
+        "gender": "Unisex"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Regular"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Hoodie Model 12",
+      "brand": "FashionHub",
+      "price": 219000,
+      "image": "hoodie_14.jpeg",
+      "category": {
+        "type": "Hoodie",
+        "gender": "Men"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Oversized"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Jacket Model 13",
+      "brand": "Moderno",
+      "price": 229000,
+      "image": "jacket_13.jpg",
+      "category": {
+        "type": "Jacket",
+        "gender": "Women"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Slim"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Sweater Model 14",
+      "brand": "SimpleStyle",
+      "price": 239000,
+      "image": "sweater_14.jpg",
+      "category": {
+        "type": "Sweater",
+        "gender": "Unisex"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Regular"
+      }
+    },
+    {
+      "id": 15,
+      "name": "T-Shirt Model 15",
+      "brand": "UrbanWear",
+      "price": 249000,
+      "image": "t-shirt_15.jpg",
+      "category": {
+        "type": "T-Shirt",
+        "gender": "Men"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Oversized"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Shirt Model 16",
+      "brand": "ClassicLine",
+      "price": 259000,
+      "image": "shirt_16.jpg",
+      "category": {
+        "type": "Shirt",
+        "gender": "Women"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Slim"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Hoodie Model 17",
+      "brand": "FashionHub",
+      "price": 269000,
+      "image": "hoodie_12.jpg",
+      "category": {
+        "type": "Hoodie",
+        "gender": "Unisex"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Regular"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Jacket Model 18",
+      "brand": "Moderno",
+      "price": 279000,
+      "image": "jacket_18.jpg",
+      "category": {
+        "type": "Jacket",
+        "gender": "Men"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Oversized"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Sweater Model 19",
+      "brand": "SimpleStyle",
+      "price": 289000,
+      "image": "sweater_19.jpg",
+      "category": {
+        "type": "Sweater",
+        "gender": "Women"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Slim"
+      }
+    },
+    {
+      "id": 20,
+      "name": "T-Shirt Model 20",
+      "brand": "UrbanWear",
+      "price": 299000,
+      "image": "t-shirt_20.jpg",
+      "category": {
+        "type": "T-Shirt",
+        "gender": "Unisex"
+      },
+      "details": {
+        "material": "Cotton Blend",
+        "origin": "Indonesia",
+        "care": "Machine wash"
+      },
+      "size": {
+        "available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "fit": "Regular"
+      }
+    }
+  ]
