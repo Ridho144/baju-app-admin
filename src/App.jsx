@@ -42,7 +42,8 @@ const Transaction = React.lazy(() => import("./pages/Transaction"));
 const Reviews = React.lazy(() => import("./pages/Reviews"));
 const ActivityLog = React.lazy(() => import("./pages/Activity"));
 const Settings = React.lazy(() => import("./pages/Settings"));
-
+const Quotes = React.lazy(() => import("./pages/quotes"));
+const ProductDetail = React.lazy(() => import("./pages/ProdukDetail"));
 
 function App() {
   return (
@@ -73,6 +74,8 @@ function App() {
               <Route path="/reviews" element={<Reviews />} />
               <Route path="/activity-log" element={<ActivityLog />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/quotes" element={<Quotes />} />
+              <Route path="/products/:productId" element={<ProductDetail />} />
             </Route>
           </Routes>
         </div>

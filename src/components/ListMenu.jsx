@@ -13,6 +13,7 @@ import {
   FaClock,
   FaCog,
 } from "react-icons/fa";
+import { MdFormatQuote } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 export default function ListMenu() {
@@ -59,51 +60,57 @@ export default function ListMenu() {
             <AiOutlineUser className="text-lg" />
             <span>User</span>
           </NavLink>
+
+          <NavLink to="/transactions" className={menuClass}>
+            <FaMoneyCheckAlt className="text-lg" />
+            <span>Transactions</span>
+          </NavLink>
+
+          <NavLink to="/reviews" className={menuClass}>
+            <FaStar className="text-lg" />
+            <span>Reviews</span>
+          </NavLink>
+
+          <NavLink to="/activity-log" className={menuClass}>
+            <FaClock className="text-lg" />
+            <span>Activity Log</span>
+          </NavLink>
+
+          <NavLink to="/settings" className={menuClass}>
+            <FaCog className="text-lg" />
+            <span>Settings</span>
+          </NavLink>
+
+          <NavLink to="/quotes" className={menuClass}>
+            <MdFormatQuote size={20} />
+            <span>Quotes</span>
+          </NavLink>
         </nav>
       </div>
-      <NavLink to="/transactions" className={menuClass}>
-        <FaMoneyCheckAlt className="text-lg" />
-        <span>Transactions</span>
-      </NavLink>
 
-      <NavLink to="/reviews" className={menuClass}>
-        <FaStar className="text-lg" />
-        <span>Reviews</span>
-      </NavLink>
-
-      <NavLink to="/activity-log" className={menuClass}>
-        <FaClock className="text-lg" />
-        <span>Activity Log</span>
-      </NavLink>
-
-      <NavLink to="/settings" className={menuClass}>
-        <FaCog className="text-lg" />
-        <span>Settings</span>
-      </NavLink>
-
-      {/* Bottom section
-
+      {/* Optional bottom section: Uncomment if needed
       <div className="flex flex-col gap-4">
         <NavLink to="/error400" className={menuClass}>
           <FaExclamationTriangle className="text-lg" />
           <span>Error 400</span>
         </NavLink>
-        
+
         <NavLink to="/error401" className={menuClass}>
           <FaExclamationTriangle className="text-lg" />
           <span>Error 401</span>
         </NavLink>
-        
+
         <NavLink to="/error403" className={menuClass}>
           <FaExclamationTriangle className="text-lg" />
           <span>Error 403</span>
         </NavLink>
-        
+
         <NavLink to="/logout" className={menuClass}>
           <FaSignOutAlt className="text-lg" />
           <span>Log out</span>
         </NavLink>
-      </div> */}
+      </div>
+      */}
     </div>
   );
 }

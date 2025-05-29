@@ -39,7 +39,14 @@ export default function ProductList() {
                     className="w-16 h-16 object-cover rounded"
                   />
                 </td>
-                <td className="p-3 font-medium">{product.name}</td>
+                <td className="p-3 font-medium">
+                  <Link
+                    to={`/products/${product.id}`}
+                    className="text-blue-600 hover:underline"
+                  >
+                    {product.name}
+                  </Link>
+                </td>
                 <td className="p-3">
                   <span className="px-2 py-1 badge-emas rounded-full text-xs">
                     {product.category}
@@ -66,13 +73,15 @@ export default function ProductList() {
                 <td className="p-3">
                   <div className="flex items-center gap-1">
                     <span className="text-yellow-500">
-                      {'★'.repeat(Math.round(product.rating))}
-                      {'☆'.repeat(5 - Math.round(product.rating))}
+                      {"★".repeat(Math.round(product.rating))}
+                      {"☆".repeat(5 - Math.round(product.rating))}
                     </span>
                     <span>
-                      ({typeof product.rating === 'number'
+                      (
+                      {typeof product.rating === "number"
                         ? product.rating.toFixed(1)
-                        : 'N/A'})
+                        : "N/A"}
+                      )
                     </span>
                   </div>
                 </td>
