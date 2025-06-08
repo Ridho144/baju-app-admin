@@ -12,7 +12,10 @@ import {
   FaStar,
   FaClock,
   FaCog,
+  FaPaperPlane,
+  FaStarAndCrescent,
 } from "react-icons/fa";
+import { FaPeopleLine } from "react-icons/fa6";
 import { MdFormatQuote } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
@@ -87,6 +90,16 @@ export default function ListMenu() {
           </NavLink>
         </nav>
       </div>
+
+      <NavLink to="/product" className={menuClass}>
+        <FaShoppingBag size={20} />
+        <span>Product </span>
+      </NavLink>
+
+      <NavLink to="/CustomersPage" className={menuClass}>
+        <FaPeopleLine size={20} />
+        <span>Member </span>
+      </NavLink>
 
       {/* Optional bottom section: Uncomment if needed
       <div className="flex flex-col gap-4">

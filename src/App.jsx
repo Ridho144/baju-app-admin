@@ -1,24 +1,11 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./assets/tailwind.css";
+import { useEffect, useState, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
-import { Suspense } from "react";
-// import Sidebar from "./layouts/Sidebar";
-// import Dashboard from "./pages/Dashboard";
-// import ProductList from "./pages/listproduk";
-// import NotFoundPage from "./pages/NotFound";
-// import Error400 from "./pages/Error400";
-// import Error401 from "./pages/Error401";
-// import Error403 from "./pages/Error403";
-// // import AddCustomer from "./pages/AddCustomer";
-// // import AddOrder from "./pages/AddOrder";
-// // import AddProduct from "./pages/AddProduct";
-// import Customers from "./pages/customers";
-// import Orders from "./pages/orders";
-// import Categories from "./pages/categories";
+import "./assets/tailwind.css";
+import { productAPI } from "./services/ProductAPI";
+import ProductsPage from "./pages/Product";
 
+// Lazy imports...
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Orders = React.lazy(() => import("./pages/orders"));
 const Error400 = React.lazy(() => import("./pages/Error400"));
@@ -44,8 +31,24 @@ const ActivityLog = React.lazy(() => import("./pages/Activity"));
 const Settings = React.lazy(() => import("./pages/Settings"));
 const Quotes = React.lazy(() => import("./pages/quotes"));
 const ProductDetail = React.lazy(() => import("./pages/ProdukDetail"));
+const CustomersPage = React.lazy(() => import("./pages/CustomerPages"));
+
+
 
 function App() {
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        const products = await productAPI.fetchProducts();
+        console.log("Products loaded on app init:", products);
+      } catch (error) {
+        console.error("Error fetching products on app load:", error);
+      }
+    };
+
+    loadProducts();
+  }, []);
+
   return (
     <Suspense fallback={<Loading />}>
       <div className="bg-gray-100 min-h-screen flex">
@@ -58,7 +61,7 @@ function App() {
               <Route path="/forgot" element={<Forgot />} />
             </Route>
 
-            {/* Main layout routes */}
+            {/* Main layout */}
             <Route element={<MainLayouts />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/orders" element={<Orders />} />
@@ -75,7 +78,8 @@ function App() {
               <Route path="/activity-log" element={<ActivityLog />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/quotes" element={<Quotes />} />
-              <Route path="/products/:productId" element={<ProductDetail />} />
+              <Route path="/product" element={<ProductsPage />} />
+              <Route path="/CustomersPage" element={<CustomersPage />} />
             </Route>
           </Routes>
         </div>
