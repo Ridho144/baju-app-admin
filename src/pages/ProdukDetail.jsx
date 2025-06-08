@@ -1,4 +1,3 @@
-// src/pages/ProductDetail.jsx
 import { useParams } from "react-router-dom";
 import products from "../data/productlist";
 
