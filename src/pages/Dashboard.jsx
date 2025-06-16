@@ -3,8 +3,8 @@ import PageHeader from "../components/PageHeader";
 
 const courses = [
   {
-    title: "French",
-    lessons: "35 lessons",
+    title: "Nike",
+    stocks: "35 stocks",
     progress: 75,
     color: "bg-blue-500",
     image:
@@ -12,8 +12,8 @@ const courses = [
     circleColor: "#2563eb",
   },
   {
-    title: "Portugese",
-    lessons: "30 lessons",
+    title: "Adidas",
+    stocks: "30 stocks",
     progress: 50,
     color: "bg-orange-400",
     image:
@@ -21,8 +21,8 @@ const courses = [
     circleColor: "#fb923c",
   },
   {
-    title: "Italian",
-    lessons: "20 lessons",
+    title: "Uniqlo",
+    stocks: "20 stocks",
     progress: 25,
     color: "bg-green-500",
     image:
@@ -30,8 +30,8 @@ const courses = [
     circleColor: "#4ade80",
   },
   {
-    title: "German",
-    lessons: "40 lessons",
+    title: "Erigo",
+    stocks: "40 stocks",
     progress: 75,
     color: "bg-yellow-300 text-gray-900",
     image:
@@ -42,7 +42,7 @@ const courses = [
 
 const CourseCard = ({
   title,
-  lessons,
+  stocks,
   progress,
   color,
   image,
@@ -54,7 +54,7 @@ const CourseCard = ({
     <div className={`relative rounded-xl ${color} p-6 shadow-lg overflow-hidden`}>
       <div>
         <h2 className="font-semibold text-lg mb-1">{title}</h2>
-        <p className="text-xs mb-4">{lessons}</p>
+        <p className="text-xs mb-4">{stocks}</p>
         <div className="w-12 h-12 mb-2 relative">
           <svg className="w-12 h-12" viewBox="0 0 36 36">
             <circle
@@ -147,10 +147,10 @@ const WeeklyActivity = () => {
     <section className="max-w-6xl mx-auto mt-10">
       <h2 className="font-semibold text-lg mb-4">Statistics</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        {[{ label: "Courses\nCompleted", value1: "1", value2: "02" },
-          { label: "Total Points\nGained", value1: "1", value2: "250" },
-          { label: "Courses\nIn Progress", value1: "1", value2: "03" },
-          { label: "Tasks\nFinished", value1: "1", value2: "05" },
+        {[{ label: "Delivery\nCompleted", value1: "1", value2: "02" },
+          { label: "Member\nGained", value1: "1", value2: "250" },
+          { label: "Delivery\nIn Progress", value1: "1", value2: "03" },
+          { label: "Total\nTransaction", value1: "1", value2: "05" },
         ].map((stat, idx) => (
           <div key={idx} className="bg-blue-100 rounded-xl p-4">
             <p className="text-blue-400 text-sm mb-6 leading-snug whitespace-pre-line">
@@ -218,7 +218,7 @@ export default function Dashboard() {
       <section className="max-w-6xl mx-auto mt-6">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-2xl font-semibold text-gray-900">
-            My <span className="font-bold">Courses</span>
+            Stock <span className="font-bold"></span>
           </h1>
           <a href="#" className="text-sm text-blue-500 hover:underline">
             View All
@@ -238,7 +238,7 @@ export default function Dashboard() {
       <section className="max-w-6xl mx-auto mt-8">
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
           <h2 className="text-lg font-semibold mb-2">Total Revenue</h2>
-          <p className="text-4xl font-bold text-yellow-500">Rp. 128</p>
+          <p className="text-4xl font-bold text-yellow-500">Rp. -</p>
         </div>
       </section>
     </div>

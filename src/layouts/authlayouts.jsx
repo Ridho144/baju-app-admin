@@ -7,7 +7,7 @@ export default function AuthLayout() {
         {/* Branding */}
         <div className="flex items-center justify-center mb-6">
           <h1 className="text-4xl font-serif font-bold text-yellow-600 tracking-wide">
-            <span className="text-yellow-600">Ridho</span>
+            <span className="text-yellow-600">Sipbaon</span>
             <span className="text-gray-800">Fashion</span>
           </h1>
         </div>
@@ -17,7 +17,7 @@ export default function AuthLayout() {
 
         {/* Footer */}
         <p className="text-center text-sm text-yellow-500 mt-6 font-light">
-          © 2025 Ridho Fashion. All rights reserved.
+          © 2025 Sipbaon Fashion. All rights reserved.
         </p>
       </div>
     </div>

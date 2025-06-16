@@ -32,8 +32,8 @@ const Settings = React.lazy(() => import("./pages/Settings"));
 const Quotes = React.lazy(() => import("./pages/quotes"));
 const ProductDetail = React.lazy(() => import("./pages/ProdukDetail"));
 const CustomersPage = React.lazy(() => import("./pages/CustomerPages"));
-
-
+const ListUser = React.lazy(() => import("./pages/ListUser"));
+const FAQPage = React.lazy(() => import("./pages/Faq")); // <- Tambahkan halaman FAQ
 
 function App() {
   useEffect(() => {
@@ -80,6 +80,8 @@ function App() {
               <Route path="/quotes" element={<Quotes />} />
               <Route path="/product" element={<ProductsPage />} />
               <Route path="/CustomersPage" element={<CustomersPage />} />
+              <Route path="/listuser" element={<ListUser />} />
+              <Route path="/faq" element={<FAQPage />} /> {/* <- Route FAQ */}
             </Route>
           </Routes>
         </div>
