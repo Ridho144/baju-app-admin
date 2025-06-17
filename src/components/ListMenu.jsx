@@ -24,12 +24,8 @@ export default function ListMenu() {
   const navigate = useNavigate();
 
   const menuClass = ({ isActive }) =>
-    `flex items-center gap-3 px-4 py-2 rounded-full cursor-pointer transition-all
-    ${
-      isActive
-        ? "bg-orange-500 text-white font-semibold"
-        : "text-gray-500 hover:bg-gray-100 hover:text-orange-500"
-    }`;
+    `flex items-center gap-3 px-4 py-2 rounded-md cursor-pointer transition-all
+    ${isActive ? "bg-orange-500 text-white font-semibold" : "text-gray-600 hover:bg-gray-100 hover:text-orange-500"}`;
 
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -38,107 +34,82 @@ export default function ListMenu() {
 
   return (
     <div className="flex flex-col justify-between h-full p-4">
-      {/* Menu Items */}
       <nav className="flex flex-col gap-4">
+
         <NavLink to="/" className={menuClass}>
           <FaHome className="text-lg" />
           <span>Dashboard</span>
         </NavLink>
 
-        <NavLink to="/categories" className={menuClass}>
-          <FaThLarge className="text-lg" />
-          <span>Categories</span>
-        </NavLink>
+        {/* Category Management */}
+        <details className="dropdown">
+          <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
+            Management
+          </summary>
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+            <li><NavLink to="/categories" className={menuClass}><FaThLarge />Categories</NavLink></li>
+            <li><NavLink to="/products" className={menuClass}><FaList />List Produk</NavLink></li>
+            <li><NavLink to="/product" className={menuClass}><FaShoppingBag />Product</NavLink></li>
+            <li><NavLink to="/quotes" className={menuClass}><MdFormatQuote size={18} />Quotes</NavLink></li>
+          </ul>
+        </details>
 
-        <NavLink to="/products" className={menuClass}>
-          <FaList className="text-lg" />
-          <span>List Produk</span>
-        </NavLink>
+        {/* User Management */}
+        <details className="dropdown">
+          <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
+            Users
+          </summary>
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+            <li><NavLink to="/customers" className={menuClass}><FaTshirt />Customers</NavLink></li>
+            <li><NavLink to="/CustomersPage" className={menuClass}><FaPeopleLine />Members</NavLink></li>
+            <li><NavLink to="/listuser" className={menuClass}><AiOutlineUser />Users</NavLink></li>
+          </ul>
+        </details>
 
-        <NavLink to="/customers" className={menuClass}>
-          <FaTshirt className="text-lg" />
-          <span>Customers</span>
-        </NavLink>
+        {/* Orders & Transaction */}
+        <details className="dropdown">
+          <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
+            Transactions
+          </summary>
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+            <li><NavLink to="/orders" className={menuClass}><FaShoppingCart />Orders</NavLink></li>
+            <li><NavLink to="/transactions" className={menuClass}><FaMoneyCheckAlt />Transactions</NavLink></li>
+          </ul>
+        </details>
 
-        <NavLink to="/orders" className={menuClass}>
-          <FaShoppingCart className="text-lg" />
-          <span>Orders</span>
-        </NavLink>
+        {/* Feedback */}
+        <details className="dropdown">
+          <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
+            Feedback
+          </summary>
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+            <li><NavLink to="/reviews" className={menuClass}><FaStar />Reviews</NavLink></li>
+            <li><NavLink to="/faq" className={menuClass}><FaQuestionCircle />FAQ</NavLink></li>
+          </ul>
+        </details>
 
-        <NavLink to="/user" className={menuClass}>
-          <AiOutlineUser className="text-lg" />
-          <span>User</span>
-        </NavLink>
-
-        <NavLink to="/transactions" className={menuClass}>
-          <FaMoneyCheckAlt className="text-lg" />
-          <span>Transactions</span>
-        </NavLink>
-
-        <NavLink to="/reviews" className={menuClass}>
-          <FaStar className="text-lg" />
-          <span>Reviews</span>
-        </NavLink>
-
-        <NavLink to="/activity-log" className={menuClass}>
-          <FaClock className="text-lg" />
-          <span>Activity Log</span>
-        </NavLink>
-
-        <NavLink to="/settings" className={menuClass}>
-          <FaCog className="text-lg" />
-          <span>Settings</span>
-        </NavLink>
-
-        <NavLink to="/quotes" className={menuClass}>
-          <MdFormatQuote size={20} />
-          <span>Quotes</span>
-        </NavLink>
-
-        <NavLink to="/product" className={menuClass}>
-          <FaShoppingBag size={20} />
-          <span>Product</span>
-        </NavLink>
-
-        <NavLink to="/CustomersPage" className={menuClass}>
-          <FaPeopleLine size={20} />
-          <span>Member</span>
-        </NavLink>
-
-        <NavLink to="/listuser" className={menuClass}>
-          <AiOutlineUser size={20} />
-          <span>Users</span>
-        </NavLink>
-        <NavLink to="/faq" className="flex items-center gap-2 text-gray-700 hover:text-black">
-        <FaQuestionCircle /> FAQ
-      </NavLink>
+        {/* Settings & Log */}
+        <details className="dropdown">
+          <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
+            System
+          </summary>
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+            <li><NavLink to="/activity-log" className={menuClass}><FaClock />Activity Log</NavLink></li>
+            <li><NavLink to="/settings" className={menuClass}><FaCog />Settings</NavLink></li>
+          </ul>
+        </details>
       </nav>
 
-      {/* Bottom Section */}
-      {/* <div className="flex flex-col gap-3 mt-8 border-t pt-4">
-        <NavLink to="/error400" className={menuClass}>
-          <FaExclamationTriangle className="text-lg" />
-          <span>Error 400</span>
-        </NavLink>
-
-        <NavLink to="/error401" className={menuClass}>
-          <FaExclamationTriangle className="text-lg" />
-          <span>Error 401</span>
-        </NavLink>
-
-        <NavLink to="/error403" className={menuClass}>
-          <FaExclamationTriangle className="text-lg" />
-          <span>Error 403</span>
-        </NavLink>
-
+      {/* Logout */}
+      <div className="pt-6 border-t mt-6">
         <button
           onClick={handleLogout}
-          className="flex items-center gap-3 px-4 py-2 rounded-full text-gray-500 hover:text-red-500 hover:bg-red-100 transition-all"
+          className="flex items-center gap-3 px-4 py-2 text-gray-500 hover:text-red-500 hover:bg-red-100 rounded-md transition-all"
         >
           <FaSignOutAlt className="text-lg" />
           <span>Log out</span>
         </button>
-      </div> */}
+      </div>
     </div>
   );
 }
