@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 Tambahkan ini
 import { productAPI } from "../services/ProductAPI";
 
-export default function ProductForm({ currentProduct, onFinish }) {
+export default function ProductForm({ currentProduct }) {
   const [form, setForm] = useState({
     name: "",
     description: "",
     price: "",
     stock: "",
+    image: "",
   });
+
+  const navigate = useNavigate(); // 👈 Inisialisasi navigasi
 
   useEffect(() => {
     if (currentProduct) setForm(currentProduct);
@@ -25,8 +29,8 @@ export default function ProductForm({ currentProduct, onFinish }) {
     } else {
       await productAPI.createProduct(form);
     }
-    onFinish();
-    setForm({ name: "", description: "", price: "", stock: "" });
+    setForm({ name: "", description: "", price: "", stock: "", image: "" });
+    navigate("/product"); // 👈 Arahkan user ke halaman daftar produk
   };
 
   return (
@@ -67,6 +71,14 @@ export default function ProductForm({ currentProduct, onFinish }) {
         placeholder="Stock"
         className="w-full border px-3 py-2 rounded"
         required
+      />
+      <input
+        type="text"
+        name="image"
+        value={form.image}
+        onChange={handleChange}
+        placeholder="Image URL"
+        className="w-full border px-3 py-2 rounded"
       />
       <button className="bg-green-600 text-white px-4 py-2 rounded">
         {currentProduct ? "Update" : "Add"}

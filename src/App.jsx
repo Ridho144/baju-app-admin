@@ -33,7 +33,9 @@ const Quotes = React.lazy(() => import("./pages/quotes"));
 const ProductDetail = React.lazy(() => import("./pages/ProdukDetail"));
 const CustomersPage = React.lazy(() => import("./pages/CustomerPages"));
 const ListUser = React.lazy(() => import("./pages/ListUser"));
-const FAQPage = React.lazy(() => import("./pages/Faq")); // <- Tambahkan halaman FAQ
+const FAQPage = React.lazy(() => import("./pages/Faq"));
+const Product = React.lazy(() => import("./pages/Product"));
+
 
 function App() {
   useEffect(() => {

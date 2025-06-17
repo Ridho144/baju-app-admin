@@ -8,12 +8,10 @@ import {
   FaShoppingCart,
   FaSignOutAlt,
   FaShoppingBag,
-  FaExclamationTriangle,
   FaMoneyCheckAlt,
   FaStar,
   FaClock,
   FaCog,
-  FaPaperPlane,
   FaQuestionCircle,
 } from "react-icons/fa";
 import { FaPeopleLine } from "react-icons/fa6";
@@ -25,7 +23,11 @@ export default function ListMenu() {
 
   const menuClass = ({ isActive }) =>
     `flex items-center gap-3 px-4 py-2 rounded-md cursor-pointer transition-all
-    ${isActive ? "bg-orange-500 text-white font-semibold" : "text-gray-600 hover:bg-gray-100 hover:text-orange-500"}`;
+    ${
+      isActive
+        ? "bg-orange-500 text-white font-semibold"
+        : "text-gray-600 hover:bg-gray-100 hover:text-orange-500"
+    }`;
 
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -33,20 +35,24 @@ export default function ListMenu() {
   };
 
   return (
-    <div className="flex flex-col justify-between h-full p-4">
-      <nav className="flex flex-col gap-4">
+    <div className="flex flex-col justify-between h-full px-4 py-5 bg-white text-gray-700 shadow-md">
+      <nav className="flex flex-col gap-3">
 
+        {/* Dashboard */}
         <NavLink to="/" className={menuClass}>
           <FaHome className="text-lg" />
           <span>Dashboard</span>
         </NavLink>
 
-        {/* Category Management */}
+        {/* Separator */}
+        <div className="border-t border-yellow-500 my-2" />
+
+        {/* Management */}
         <details className="dropdown">
           <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
             Management
           </summary>
-          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
             <li><NavLink to="/categories" className={menuClass}><FaThLarge />Categories</NavLink></li>
             <li><NavLink to="/products" className={menuClass}><FaList />List Produk</NavLink></li>
             <li><NavLink to="/product" className={menuClass}><FaShoppingBag />Product</NavLink></li>
@@ -54,46 +60,54 @@ export default function ListMenu() {
           </ul>
         </details>
 
-        {/* User Management */}
+        <div className="border-t border-yellow-500 my-2" />
+
+        {/* Users */}
         <details className="dropdown">
           <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
             Users
           </summary>
-          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
             <li><NavLink to="/customers" className={menuClass}><FaTshirt />Customers</NavLink></li>
             <li><NavLink to="/CustomersPage" className={menuClass}><FaPeopleLine />Members</NavLink></li>
             <li><NavLink to="/listuser" className={menuClass}><AiOutlineUser />Users</NavLink></li>
           </ul>
         </details>
 
-        {/* Orders & Transaction */}
+        <div className="border-t border-yellow-500 my-2" />
+
+        {/* Transactions */}
         <details className="dropdown">
           <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
             Transactions
           </summary>
-          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
             <li><NavLink to="/orders" className={menuClass}><FaShoppingCart />Orders</NavLink></li>
             <li><NavLink to="/transactions" className={menuClass}><FaMoneyCheckAlt />Transactions</NavLink></li>
           </ul>
         </details>
+
+        <div className="border-t border-yellow-500 my-2" />
 
         {/* Feedback */}
         <details className="dropdown">
           <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
             Feedback
           </summary>
-          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
             <li><NavLink to="/reviews" className={menuClass}><FaStar />Reviews</NavLink></li>
             <li><NavLink to="/faq" className={menuClass}><FaQuestionCircle />FAQ</NavLink></li>
           </ul>
         </details>
 
-        {/* Settings & Log */}
+        <div className="border-t border-yellow-500 my-2" />
+
+        {/* System */}
         <details className="dropdown">
           <summary className="btn w-full text-left bg-transparent hover:bg-gray-100 text-gray-600 font-medium py-2 px-4 rounded-md">
             System
           </summary>
-          <ul className="menu dropdown-content w-full mt-1 p-2 bg-base-100 rounded-box shadow z-10">
+          <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
             <li><NavLink to="/activity-log" className={menuClass}><FaClock />Activity Log</NavLink></li>
             <li><NavLink to="/settings" className={menuClass}><FaCog />Settings</NavLink></li>
           </ul>
@@ -101,7 +115,7 @@ export default function ListMenu() {
       </nav>
 
       {/* Logout */}
-      <div className="pt-6 border-t mt-6">
+      <div className="pt-6 mt-6 border-t border-yellow-500">
         <button
           onClick={handleLogout}
           className="flex items-center gap-3 px-4 py-2 text-gray-500 hover:text-red-500 hover:bg-red-100 rounded-md transition-all"
