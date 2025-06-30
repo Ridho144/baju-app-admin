@@ -70,4 +70,10 @@ button:focus-visible {
 html {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.modal {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 

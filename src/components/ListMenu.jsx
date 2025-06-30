@@ -1,4 +1,3 @@
-// src/components/ListMenu.jsx
 import { AiOutlineUser } from "react-icons/ai";
 import {
   FaHome,
@@ -13,8 +12,12 @@ import {
   FaClock,
   FaCog,
   FaQuestionCircle,
+  FaImages,
+  FaEnvelope,
+  FaNewspaper,
+  FaBriefcase,
 } from "react-icons/fa";
-import { FaPeopleLine } from "react-icons/fa6";
+import { FaPeopleLine } from "react-icons/fa6"; // ✅ Ikon untuk Our Team
 import { MdFormatQuote } from "react-icons/md";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -37,14 +40,12 @@ export default function ListMenu() {
   return (
     <div className="flex flex-col justify-between h-full px-4 py-5 bg-white text-gray-700 shadow-md">
       <nav className="flex flex-col gap-3">
-
         {/* Dashboard */}
         <NavLink to="/" className={menuClass}>
           <FaHome className="text-lg" />
           <span>Dashboard</span>
         </NavLink>
 
-        {/* Separator */}
         <div className="border-t border-yellow-500 my-2" />
 
         {/* Management */}
@@ -53,10 +54,48 @@ export default function ListMenu() {
             Management
           </summary>
           <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
-            <li><NavLink to="/categories" className={menuClass}><FaThLarge />Categories</NavLink></li>
-            <li><NavLink to="/products" className={menuClass}><FaList />List Produk</NavLink></li>
-            <li><NavLink to="/product" className={menuClass}><FaShoppingBag />Product</NavLink></li>
-            <li><NavLink to="/quotes" className={menuClass}><MdFormatQuote size={18} />Quotes</NavLink></li>
+            <li>
+              <NavLink to="/categories" className={menuClass}>
+                <FaThLarge />
+                Categories
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/products" className={menuClass}>
+                <FaList />
+                List Produk
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/product" className={menuClass}>
+                <FaShoppingBag />
+                Product
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/catalog-media" className={menuClass}>
+                <FaImages />
+                Catalog Media
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/quotes" className={menuClass}>
+                <MdFormatQuote size={18} />
+                Quotes
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/lowongan" className={menuClass}>
+                <FaBriefcase />
+                Lowongan Kerja
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/our-team" className={menuClass}>
+                <FaPeopleLine />
+                Our Team
+              </NavLink>
+            </li>
           </ul>
         </details>
 
@@ -68,9 +107,24 @@ export default function ListMenu() {
             Users
           </summary>
           <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
-            <li><NavLink to="/customers" className={menuClass}><FaTshirt />Customers</NavLink></li>
-            <li><NavLink to="/CustomersPage" className={menuClass}><FaPeopleLine />Members</NavLink></li>
-            <li><NavLink to="/listuser" className={menuClass}><AiOutlineUser />Users</NavLink></li>
+            <li>
+              <NavLink to="/customers" className={menuClass}>
+                <FaTshirt />
+                Customers
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/CustomersPage" className={menuClass}>
+                <FaPeopleLine />
+                Members
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/listuser" className={menuClass}>
+                <AiOutlineUser />
+                Users
+              </NavLink>
+            </li>
           </ul>
         </details>
 
@@ -82,8 +136,18 @@ export default function ListMenu() {
             Transactions
           </summary>
           <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
-            <li><NavLink to="/orders" className={menuClass}><FaShoppingCart />Orders</NavLink></li>
-            <li><NavLink to="/transactions" className={menuClass}><FaMoneyCheckAlt />Transactions</NavLink></li>
+            <li>
+              <NavLink to="/orders" className={menuClass}>
+                <FaShoppingCart />
+                Orders
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/transactions" className={menuClass}>
+                <FaMoneyCheckAlt />
+                Transactions
+              </NavLink>
+            </li>
           </ul>
         </details>
 
@@ -95,8 +159,36 @@ export default function ListMenu() {
             Feedback
           </summary>
           <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
-            <li><NavLink to="/reviews" className={menuClass}><FaStar />Reviews</NavLink></li>
-            <li><NavLink to="/faq" className={menuClass}><FaQuestionCircle />FAQ</NavLink></li>
+            <li>
+              <NavLink to="/reviews" className={menuClass}>
+                <FaStar />
+                Reviews
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/faq" className={menuClass}>
+                <FaQuestionCircle />
+                FAQ
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about-us" className={menuClass}>
+                <FaQuestionCircle />
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/artikel" className={menuClass}>
+                <FaNewspaper />
+                Artikel
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/kontak" className={menuClass}>
+                <FaEnvelope />
+                Kontak
+              </NavLink>
+            </li>
           </ul>
         </details>
 
@@ -108,8 +200,18 @@ export default function ListMenu() {
             System
           </summary>
           <ul className="menu dropdown-content w-full mt-1 p-2 bg-white rounded-box shadow z-10">
-            <li><NavLink to="/activity-log" className={menuClass}><FaClock />Activity Log</NavLink></li>
-            <li><NavLink to="/settings" className={menuClass}><FaCog />Settings</NavLink></li>
+            <li>
+              <NavLink to="/activity-log" className={menuClass}>
+                <FaClock />
+                Activity Log
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/settings" className={menuClass}>
+                <FaCog />
+                Settings
+              </NavLink>
+            </li>
           </ul>
         </details>
       </nav>

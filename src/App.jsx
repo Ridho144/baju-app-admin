@@ -1,11 +1,14 @@
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import "./assets/tailwind.css";
 import { productAPI } from "./services/ProductAPI";
-import ProductsPage from "./pages/Product";
 
-// Lazy imports...
+// Non-lazy loaded pages
+import ProductsPage from "./pages/Product";
+import ArticlePage from "./pages/artikel";
+
+// Lazy-loaded pages
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Orders = React.lazy(() => import("./pages/orders"));
 const Error400 = React.lazy(() => import("./pages/Error400"));
@@ -34,8 +37,11 @@ const ProductDetail = React.lazy(() => import("./pages/ProdukDetail"));
 const CustomersPage = React.lazy(() => import("./pages/CustomerPages"));
 const ListUser = React.lazy(() => import("./pages/ListUser"));
 const FAQPage = React.lazy(() => import("./pages/Faq"));
-const Product = React.lazy(() => import("./pages/Product"));
-
+const AboutUsPage = React.lazy(() => import("./pages/aboutUs"));
+const CatalogMediaPage = React.lazy(() => import("./pages/CatalogMedia"));
+const KontakPage = React.lazy(() => import("./pages/Kontak"));
+const LowonganPage = React.lazy(() => import("./pages/lowongan"));
+const OurTeamPage = React.lazy(() => import("./pages/ourTeam"));
 
 function App() {
   useEffect(() => {
@@ -73,7 +79,6 @@ function App() {
               <Route path="/error400" element={<Error400 />} />
               <Route path="/error401" element={<Error401 />} />
               <Route path="/error403" element={<Error403 />} />
-              <Route path="*" element={<NotFoundPage />} />
               <Route path="/user" element={<User />} />
               <Route path="/transactions" element={<Transaction />} />
               <Route path="/reviews" element={<Reviews />} />
@@ -83,7 +88,14 @@ function App() {
               <Route path="/product" element={<ProductsPage />} />
               <Route path="/CustomersPage" element={<CustomersPage />} />
               <Route path="/listuser" element={<ListUser />} />
-              <Route path="/faq" element={<FAQPage />} /> {/* <- Route FAQ */}
+              <Route path="/faq" element={<FAQPage />} />
+              <Route path="/about-us" element={<AboutUsPage />} />
+              <Route path="/catalog-media" element={<CatalogMediaPage />} />
+              <Route path="/kontak" element={<KontakPage />} />
+              <Route path="/artikel" element={<ArticlePage />} />
+              <Route path="/lowongan" element={<LowonganPage />} />
+              <Route path="/our-team" element={<OurTeamPage />} /> {/* ✅ Tambahan route */}
+              <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>
         </div>

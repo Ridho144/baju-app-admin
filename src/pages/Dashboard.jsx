@@ -206,6 +206,18 @@ export default function Dashboard() {
       <div className="max-w-6xl mx-auto">
         <PageHeader />
 
+        {/* Tombol Link ke Sipbaon */}
+        <div className="mt-4 flex justify-end">
+          <a
+            href="http://sipbaon-projek.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+className="inline-block px-4 py-2 bg-white text-yellow-600 border border-yellow-500 rounded-lg hover:bg-yellow-100 hover:text-yellow-700 transition"
+          >
+            Kunjungi Sipbaon
+          </a>
+        </div>
+
         {/* My Courses */}
         <section className="mt-6">
           <div className="flex justify-between items-center mb-4">
